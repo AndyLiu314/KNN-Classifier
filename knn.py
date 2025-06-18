@@ -1,7 +1,6 @@
 import numpy as np
 import csv
 from collections import Counter
-import math
 
 class KNNClassifier:
     def __init__(self, k=3):
