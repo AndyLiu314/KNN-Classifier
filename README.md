@@ -5,6 +5,7 @@
 A K-Nearest Neighbours learning algorithm created using K values of [ 3, 5, 7, 9, 11 ]. Learning model performance is assessed using 10-fold cross-validation and evaluated on Accuracy and F1 Score metrics. 
 
 **Data Preprocessing:**
+
 Cylinders: one-hot
   - Cylinders in a car engine is a categorical variable, not numerical. Therefore, representing 
     it with one-hot can prevent the model from treating it as a continuous value.
