@@ -55,7 +55,6 @@ def load_auto_data(path_data):
 
 def preprocess_features(data, threshold=25):
     """
-    Preprocess features based on decisions made in Part 1.b
     Returns processed features and binary labels (efficient/not efficient)
     """
     features = []
@@ -162,7 +161,6 @@ def calculate_metrics(y_true, y_pred):
 def run_knn_experiment():
     """Run the complete KNN experiment with cross-validation"""
     
-    # Load data (you'll need to update this path)
     print("Loading auto data...")
     try:
         auto_data = load_auto_data('auto-mpg-regression.tsv')
@@ -256,7 +254,6 @@ def run_knn_experiment():
         print(f"  Average FN: {avg_fn:.0f}")
         print(f"  Average FP: {avg_fp:.0f}")
     
-    # Print results table
     print("\n" + "=" * 80)
     print("FINAL RESULTS - 10-FOLD CROSS-VALIDATION")
     print("=" * 80)
@@ -281,7 +278,6 @@ def run_knn_experiment():
     return results
 
 def explain_metrics():
-    """Explain why accuracy and F1 score were chosen"""
     print("\n" + "=" * 80)
     print("METRIC SELECTION JUSTIFICATION")
     print("=" * 80)
@@ -311,8 +307,5 @@ recall. Using both accuracy and F1 score provides:
     """)
 
 if __name__ == "__main__":
-    # Run the complete experiment
     results = run_knn_experiment()
-    
-    # Explain metric choices
     explain_metrics()
